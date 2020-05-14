@@ -2,6 +2,7 @@
 #include <Poco/Thread.h>
 #include <Poco/Stopwatch.h>
 #include <boost/regex.hpp>
+#include <hello.h>
 
 #include <string>
 #include <iostream>
@@ -28,6 +29,8 @@ int main(int argc, char** argv){
 
     Thread::sleep(3000);
     timer.stop();
+
+    hello();
 
     std::string s = "correct@email.com", s2="bademail";
     boost::regex expr{"\\b[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}\\b"};
